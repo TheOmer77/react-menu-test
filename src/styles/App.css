@@ -1,0 +1,108 @@
+body {
+  --background: #1a1a1a;
+  --text: #fff;
+  --button: #2b2b2b;
+  --button-hover: #353535;
+  --button-active: #252525;
+
+  --transition-duration: 100ms;
+
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: calc(100% - 32px);
+  max-width: 600px;
+}
+
+.yet-another-div-yaaaay {
+  margin-block: 50vh;
+}
+
+button {
+  color: var(--text);
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: initial;
+  background-color: var(--button);
+  box-shadow: 0 0 0 0 var(--text);
+  transition: background-color var(--transition-duration),
+    box-shadow var(--transition-duration);
+}
+
+button:hover:not(.szh-menu-button--open) {
+  background-color: var(--button-hover);
+}
+
+button:active,
+button:focus,
+.szh-menu-button--open {
+  background-color: var(--button-active);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--text);
+}
+
+.select,
+.menu .szh-menu__item {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select .chevron {
+  width: 16px;
+  height: 16px;
+}
+
+.menu-btn.szh-menu-button,
+.menu.szh-menu-container,
+.menu .szh-menu {
+  width: 100%;
+}
+
+.menu .szh-menu {
+  background-color: var(--button);
+  color: var(--text);
+}
+
+.menu .szh-menu--state-opening.szh-menu--dir-left,
+.menu .szh-menu--state-closing.szh-menu--dir-left,
+.menu .szh-menu--state-opening.szh-menu--dir-right,
+.menu .szh-menu--state-closing.szh-menu--dir-right,
+.menu .szh-menu--state-opening.szh-menu--dir-top,
+.menu .szh-menu--state-closing.szh-menu--dir-top,
+.menu .szh-menu--state-opening.szh-menu--dir-bottom,
+.menu .szh-menu--state-closing.szh-menu--dir-bottom {
+  animation-duration: var(--transition-duration);
+}
+
+.menu .szh-menu__item--hover {
+  background-color: var(--button-hover);
+}
+
+.menu .szh-menu__item--active {
+  background-color: var(--button-active);
+}
+
+.menu.szh-menu-container--itemTransition .szh-menu__item {
+  transition-duration: var(--transition-duration);
+  cursor: default;
+}
