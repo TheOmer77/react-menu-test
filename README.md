@@ -5,22 +5,16 @@ This is a test React app for the @szhsin/react-menu library.\
 
 ## Available Scripts
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode, at [http://localhost:3000](http://localhost:3000). \
 The page will reload when you make edits, and any errors will be shown in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder. \
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `dist` folder.
 
-### `npm run eject`
+### `npm run preview`
 
-Copies all the configuration files and the transitive dependencies right into your project, so you have full control over them.\
-All of the commands except `eject` will still work. **This is a one-way operation!**
+Runs a local static web server that serves the files from `dist` at [http://localhost:4173](http://localhost:4173). \
+Note that this is intended for previewing the build locally and not meant as a production server.
